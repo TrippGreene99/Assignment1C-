@@ -1,0 +1,106 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1 {
+
+  class Triangle {
+
+    private double side1;
+    private double side2;
+    private double side3;
+
+    public Triangle() {
+      side1 = 3;
+      side2 = 4;
+      side3 = 5;
+    }
+
+    public Triangle(double s1,double s2,double s3) {
+
+      side1 = s1;
+      side2 = s2;
+      side3 = s3;
+    }
+
+public double Perimeter()
+{
+return (side1 + side2 + side3);
+}
+
+public double Area() {
+
+double p = (side1 + side2 + side3) / 2.0;
+double a = p * (p - side1) * (p - side2) * (p - side3);
+return Math.Sqrt(a);
+
+}
+
+
+public void setSide1(double s)
+{
+side1 = s;
+}
+
+public double getSide1()
+{
+return side1;
+}
+
+public void setSide2(double s)
+{
+side2 = s;
+}
+
+public double getSide2()
+{
+return side2;
+}
+
+public void setSide3(double s)
+{
+side3 = s;
+}
+
+public double getSide3()
+{
+return side3;
+}
+
+
+public double Height()
+{
+double smallest = -1;
+
+if(side1<side2 && side1 < side3)
+{
+smallest = side1;
+}
+else
+{
+if (side2 < side3)
+{
+smallest = side2;
+}
+else
+{
+smallest = side3;
+}
+}
+
+return Area() * 2 / smallest;
+}
+
+
+public override String ToString()
+{
+String ret = "";
+ret += "Triangle has sides " + side1 + ", " + side2 + " and " + side3 + " .";
+ret += " It has area of " + Area() + " and perimeter of " + Perimeter();
+
+return ret;
+}
+}
+}

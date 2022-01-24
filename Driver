@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+class Program
+{
+static void Main(string[] args)
+{
+for(int c = 1; c <= 10; c++)
+{
+Circle circke = new Circle(c);
+Console.Write("Area of a circle with radius " + circke.getRadius() + " is " + circke.Area());
+Console.WriteLine(" circumference is "+circke.Circumference());
+}
+
+
+Console.WriteLine();
+
+for(int a = 1; a <= 3; a++)
+{
+for (int b = 1; b <= 3; b++)
+{
+Rectangle rectangle = new Rectangle(a, b);
+Console.WriteLine("Area of a rectangle " + rectangle.getWidth() + " by " + rectangle.getHeight() + " is " + rectangle.Area() + " it's perimeter is " + rectangle.Perimeter());
+}
+}
+
+Console.WriteLine();
+
+Triangle triangle = new Triangle(18, 30, 24);
+Console.Write("Area of a triangle " + triangle.getSide1() + "x" + triangle.getSide2() + "x" + triangle.getSide3());
+Console.Write(" is "+triangle.Area()+" it's perimeter is "+triangle.Perimeter());
+Console.WriteLine(" and it's height is "+triangle.Height());
+
+
+Console.WriteLine();
+Triangle triangle1 = new Triangle();
+Console.Write("Area of a triangle " + triangle1.getSide1() + "x" + triangle1.getSide2() + "x" + triangle1.getSide3());
+Console.Write(" is " + triangle1.Area() + " it's perimeter is " + triangle1.Perimeter());
+Console.WriteLine(" and it's height is " + triangle1.Height());
+
+Console.ReadKey();
+}
+}
+}

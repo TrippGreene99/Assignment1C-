@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+class Rectangle
+{
+
+private double height;
+private double width;
+
+public Rectangle(double h,double w)
+{
+height = h;
+width = w;
+}
+
+public void setHeight(double h)
+{
+height = h;
+}
+public void setWidth(double w)
+{
+width = w;
+}
+
+public double getWidth()
+{
+return width;
+}
+public double getHeight()
+{
+return height;
+}
+
+public double Perimeter()
+{
+return 2 * (height + width);
+}
+
+public double Area()
+{
+return (width * height);
+}
+}
+}
